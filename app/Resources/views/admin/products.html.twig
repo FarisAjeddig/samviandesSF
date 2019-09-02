@@ -1,0 +1,155 @@
+{% extends 'base.html.twig' %}
+{% block body %}<br><br>
+    <h1 class="center"><b>Les produits</b></h1>
+    <br><br>
+    <h3 class="center"><a href="{{ url("admin_create_product") }}">Créer un produit</a></h3>
+
+    <div class="row container-fluid center">
+        <div class="col-1"></div>
+        <div class="col-4">
+            <h2><b>Boeuf</b></h2>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nom</th>
+                        <th scope="col">Prix - Unité</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for item in boeuf %}
+                    <tr>
+                        <th scope="row">{{item.id}}</th>
+                        <td>{{item.name}}</td>
+                        <td>{{item.price}} - {{ item.unit }}</td>
+                        <td><a href="{{ url('admin_products_edit', { id: item.id}) }}">Modifier le produit</a><br>
+                            <span data-toggle="modal" id="{{ item.id }}" data-target="#exampleModal">
+                                <a class="delete" href="#"><span class="text-danger">Supprimer le produit</span></a>
+                            </span><br>
+                            <a href="{{ url('admin_product_image', {id: item.id}) }}" class="text-success">Gérer l'image associée</a></td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="col-2"></div>
+        <div class="col-4"><h2><b>Agneau</b></h2>
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Prix - Unité</th>
+                    <th scope="col">Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for item in agneau %}
+                    <tr>
+                        <th scope="row">{{item.id}}</th>
+                        <td>{{item.name}}</td>
+                        <td>{{item.price}} - {{ item.unit }}</td>
+                        <td><a href="{{ url('admin_products_edit', { id: item.id}) }}">Modifier le produit</a><br>
+                            <span data-toggle="modal" id="{{ item.id }}" data-target="#exampleModal">
+                                <a class="delete" href="#"><span class="text-danger">Supprimer le produit</span></a>
+                            </span><br>
+                            <a href="{{ url('admin_product_image', {id: item.id}) }}" class="text-success">Gérer l'image associée</a></td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="col-1"></div>
+    </div>
+
+    <div class="row container-fluid center">
+        <div class="col-1"></div>
+        <div class="col-4"><h2><b>Veau</b></h2>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nom</th>
+                        <th scope="col">Prix - Unité</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for item in veau %}
+                    <tr>
+                        <th scope="row">{{item.id}}</th>
+                        <td>{{item.name}}</td>
+                        <td>{{item.price}} - {{ item.unit }}</td>
+                        <td><a href="{{ url('admin_products_edit', { id: item.id}) }}">Modifier le produit</a><br>
+                            <span data-toggle="modal" id="{{ item.id }}" data-target="#exampleModal">
+                                <a class="delete" href="#"><span class="text-danger">Supprimer le produit</span></a>
+                            </span><br>
+                            <a href="{{ url('admin_product_image', {id: item.id}) }}" class="text-success">Gérer l'image associée</a></td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="col-2"></div>
+        <div class="col-4"><h2><b>Volaille</b></h2>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nom</th>
+                        <th scope="col">Prix - Unité</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for item in volaille %}
+                    <tr>
+                        <th scope="row">{{item.id}}</th>
+                        <td>{{item.name}}</td>
+                        <td>{{item.price}} - {{ item.unit }}</td>
+                        <td><a href="{{ url('admin_products_edit', { id: item.id}) }}">Modifier le produit</a><br>
+                            <span data-toggle="modal" id="{{ item.id }}" data-target="#exampleModal">
+                                <a class="delete" href="#"><span class="text-danger">Supprimer le produit</span></a>
+                            </span><br>
+                            <a href="{{ url('admin_product_image', {id: item.id}) }}" class="text-success">Gérer l'image associée</a></td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="col-1"></div>
+    </div>
+
+
+    <!-- Modal suppression d'un produit -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Supprimer un produit</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Confirmez-vous la suppression de ce produit ? <br>
+                    Produit n°<span id="numberProduct"></span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                    <button type="button" class="btn btn-primary"><a id="confirmDelete" href="#">Confirmer la suppression</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(".delete").click(function(){
+            var id = $(this).parent().attr("id");
+            $("#numberProduct").text(id);
+            $("#confirmDelete").attr("href", "{{ url("admin_products") }}/supprimer/" + id)
+        })
+
+    </script>
+{% endblock %}

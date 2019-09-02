@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <br><br><h1 class="center"><b>Modifier l'image du produit {{ party.name }}</b></h1><br><br>
+    <div class="row container-fluid">
+        <div class="col-md-8 center">
+            <h2 class="center">Image actuelle</h2><br>
+            <img src="{{ asset('uploads/pictures/') ~ party.picture }}" alt="Loupé!" style="width:30vmax;height:auto;">
+        </div>
+        <div class="col-md-4">
+            {% form_theme form 'bootstrap_4_layout.html.twig' %}
+            {{ form(form) }}
+        </div>
+    </div><br><br>
+
+{% endblock %}

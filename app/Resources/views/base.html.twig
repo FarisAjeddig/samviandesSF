@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141699514-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-141699514-1');
+        </script>
+        <meta charset="UTF-8" />
+        <meta name="description" content="La boucherie SAM est située à Levallois, au 3 Place du Maréchal de Lattre de Tassigny. Viande de qualité Halal, boeuf, veau, agneau, volaille, épicerie.">
+        <title>{% block title %}Boucherie SAM - Levallois{% endblock %}</title>
+
+        {% block stylesheets %}
+            <style>
+            body{
+                margin-right: 0;
+                padding-right: 0;
+                overflow-x: hidden;
+                /*position:;*/
+                min-height: 100%;
+            }
+
+            .header{
+                background-color: #E15554;
+                padding-top: 1%;
+                padding-bottom: 2%;
+                box-shadow: 2px 3px 5px grey;
+            }
+
+            .red2{
+                color: rgb(158, 0, 0)
+            }
+
+            header a{
+                font-size: 1.3vw;
+                color: #FFFFFF;
+                text-shadow: 0 0 1px #FFF, 0 0 1px #FFF, 0 0 1px #FFF, 0 0 1px #18baff, 0 0 1px #18baff, 0 0 1px #18baff, 0 0 1px #18baff;
+            }
+
+            header a:hover{
+                text-decoration: none;
+                color:#FFFFFF;
+            }
+
+            header, footer a:visited{
+                text-decoration: none;
+                color:#FFFFFF;
+            }
+
+            button a:hover{
+                color:#FFFFFF;
+                text-decoration: none;
+            }
+            button a{
+                color:#FFFFFF;
+                text-decoration: none;
+            }
+
+            .background {
+                background-image: url("{{ asset('images/beef.jpg') }}");
+                color: white;
+                background-repeat: no-repeat;
+                background-position: right bottom;
+                background-size: cover;
+                background-color: rgb(193, 64, 64);
+                height: 200%;
+                width: 100%;
+            }
+
+            .titleImage{
+                color: #000000;
+                text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px;
+            }
+
+            .title2{
+                font-size: 3vw;
+                margin-left: 20%;
+            }
+
+            .white{
+                color:white
+            }
+
+            .sizeText{
+                font-size: 2vw;
+            }
+
+            .sizeText2{
+                font-size: 1.5vw;
+            }
+
+            .center{
+                text-align:center;
+            }
+
+            .sizeTitle{
+                font-size:3vw;
+            }
+
+            .sizeTitle2{
+                font-size:2.5vw;
+            }
+
+            .imgValue{
+                height: auto;
+                width: 50%;
+                margin-left: 22%;
+            }
+            .imgValue2{
+                height: auto;
+                width: 72%;
+                margin-left: 22%;
+            }
+            .imgValue3{
+                height: auto;
+                width: 51%;
+                margin-left: 22%;
+            }
+
+            footer{
+                color: #FFFFFF;
+                text-shadow: 0 0 1px #FFF, 0 0 1px #FFF, 0 0 1px #FFF, 0 0 1px #18baff, 0 0 1px #18baff, 0 0 1px #18baff, 0 0 1px #18baff;
+            }
+
+            footer a{
+                color: #FFFFFF;
+                text-shadow: 0 0 1px #FFF, 0 0 1px #FFF, 0 0 1px #FFF, 0 0 1px #18baff, 0 0 1px #18baff, 0 0 1px #18baff, 0 0 1px #18baff;
+            }
+
+            footer a:hover{
+                text-decoration: none;
+                color:#FFFFFF;
+            }
+
+            footer, footer a:visited{
+                text-decoration: none;
+                color:#FFFFFF;
+            }
+
+            .red{
+                color: #E15554;
+            }
+
+            .blue{
+                color: #4D9DE0;
+            }
+
+            .yellow{
+                color: #E1BC29;
+            }
+
+            .green{
+                color: #3BB273;
+            }
+
+            .purple{
+                color: #7768AE;
+            }
+
+            .product{margin-bottom:30px; overflow: hidden; border-radius: 3px;}
+            .product_content {
+                border: solid 2px #dbdbdb;
+                border-top-color: rgb(219, 219, 219);
+                border-top-style: solid;
+                border-top-width: 2px;
+                border-right-color: rgb(219, 219, 219);
+                border-right-style: solid;
+                border-right-width: 2px;
+                border-bottom-color: rgb(219, 219, 219);
+                border-bottom-style: solid;
+                border-bottom-width: 2px;
+                border-left-color: rgb(219, 219, 219);
+                border-left-style: solid;
+                border-left-width: 2px;
+                border-image-source: initial;
+                border-image-slice: initial;
+                border-image-width: initial;
+                border-image-outset: initial;
+                border-image-repeat: initial;
+                margin-bottom: 5%;
+                margin-right: 4.16%;
+                margin-left: 4.16%
+            }
+
+            .product_image{
+                overflow: hidden;
+                max-width: 100%;
+                max-height: 100%;
+                height: auto;
+                vertical-align: middle;
+                border-style: none;
+            }
+
+        </style>
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+        {% endblock %}
+        <link rel="icon" type="image/png" href="{{ asset('images/logo.png') }}" />
+    </head>
+    <body>
+        {% block header %}
+        <header class="header">
+            <br>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-2">
+                    </div>
+                    <div class="col-md-2">
+                        <a href="{{url('homepage')}}" title="Accueil Sam Viandes">Boucherie Sam Viandes</a>
+                    </div>
+                    <div class="col-md-2">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-2" style="margin-left:35%; padding-left:5%;">
+                                <a href="{{url('homepage')}}" title="Accueil Sam Viandes">Accueil</a>
+                            </div>
+                            <div class="col-md-2" style="margin-left:5%;">
+                                <a href="{{ url('products') }}" title="Les produits de Sam Viandes">Produits</a>
+                            </div>
+                            <div class="col-md-2" style="padding-left: 5%;" title="Contact Boucherie Sam Viandes">
+                                <a href="{{ url('contact')}}">Contact</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        {% endblock %}
+        {% block body %}{% endblock %}
+        {% block footer %}
+        <footer class="header">
+            <div class="container-fluid">
+                <div class="row sizeText2 white">
+                    <div class="col-md-2">
+                    </div>
+                    <div class="col-md-4">
+                        Tous droits reservés - Boucherie SAM
+                    </div>
+                    <div class="col-md-1">
+                    </div>
+                    <div class="col-md-5">
+                        <a href="tel:+33626183688">Contact - 06 26 18 36 88</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        {% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

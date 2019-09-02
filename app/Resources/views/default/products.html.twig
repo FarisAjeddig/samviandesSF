@@ -1,0 +1,133 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <br><br>
+    <h1 class="center red"><strong>Les produits : Boucherie SAM Levallois</strong></h1><br><br>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4 center sizeText2">
+            <a href="#" id="boeuf" style="text-decoration: none; font-weight: bold; color: dimgray">Boeuf</a> /
+            <a href="#" id="agneau" style="text-decoration: none; font-weight: bold; color: dimgray">Agneau</a> /
+            <a href="#" id="veau" style="text-decoration: none; font-weight: bold; color: dimgray">Veau</a> /
+            <a href="#" id="volaille" style="text-decoration: none; font-weight: bold; color: dimgray">Volaille</a>
+        </div>
+        <div class="col-md-4"></div>
+    </div><br><br>
+
+    <script>
+        $('#boeuf').click(function(){
+            $('#list-boeuf').css("display", "");
+            $('#list-agneau').css("display", "none");
+            $('#list-veau').css("display", "none");
+            $('#list-volaille').css("display", "none");
+        })
+
+
+        $('#agneau').click(function(){
+            $('#list-boeuf').css("display", "none");
+            $('#list-agneau').css("display", "");
+            $('#list-veau').css("display", "none");
+            $('#list-volaille').css("display", "none");
+        })
+
+
+        $('#veau').click(function(){
+            $('#list-boeuf').css("display", "none");
+            $('#list-agneau').css("display", "none");
+            $('#list-veau').css("display", "");
+            $('#list-volaille').css("display", "none");
+        })
+
+
+        $('#volaille').click(function(){
+            $('#list-boeuf').css("display", "none");
+            $('#list-agneau').css("display", "none");
+            $('#list-veau').css("display", "none");
+            $('#list-volaille').css("display", "");
+        })
+    </script>
+
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-10 center">
+
+            <div class="tab-pane fade show active row" id="list-boeuf" role="tabpanel" aria-labelledby="list-boeuf-list">
+                {% for item in boeuf %}
+                    <div class="col-xl-3 col-lg-5 col-md-5 col-sm-10 product_content">
+                        <div class="product">
+                            <div>
+                                <img class="product_image" src="{{ asset('uploads/pictures/' ~ item.picture) }}" alt="{{ asset(item.alt) }}">
+                            </div>
+                            <div class="">
+                                <div class="">
+                                    <h2 style="margin-top:3%;"><strong class="red">{{item.name}}</strong></h2>
+                                    <p class="card-text red2"><b style="font-size: 3em;">{{item.price}}</b> {{item.unit}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <div class="tab-pane fade show active row" style="display:none;" id="list-agneau" role="tabpanel" aria-labelledby="list-agneau-list">
+                {% for item in agneau %}
+                    <div class="col-xl-3 col-lg-5 col-md-5 col-sm-10 product_content">
+                        <div class="product">
+                            <div>
+                                <img class="product_image" src="{{ asset('uploads/pictures/' ~ item.picture) }}" alt="{{ asset(item.alt) }}">
+                            </div>
+                            <div class="">
+                                <div class="">
+                                    <h2 style="margin-top:3%;"><strong class="red">{{item.name}}</strong></h2>
+                                    <p class="card-text red2"><b style="font-size: 3em;">{{item.price}}</b> {{item.unit}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <div class="tab-pane fade show active row" style="display:none;" id="list-veau" role="tabpanel" aria-labelledby="list-veau-list">
+                {% for item in veau %}
+                    <div class="col-xl-3 col-lg-5 col-md-5 col-sm-10 product_content">
+                        <div class="product">
+                            <div>
+                                <img class="product_image" src="{{ asset('uploads/pictures/' ~ item.picture) }}" alt="{{ asset(item.alt) }}">
+                            </div>
+                            <div class="">
+                                <div class="">
+                                    <h2 style="margin-top:3%;"><strong class="red">{{item.name}}</strong></h2>
+                                    <p class="card-text red2"><b style="font-size: 3em;">{{item.price}}</b> {{item.unit}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <div class="tab-pane fade show active row" style="display:none;" id="list-volaille" role="tabpanel" aria-labelledby="list-volaille-list">
+                {% for item in volaille %}
+                    <div class="col-xl-3 col-lg-5 col-md-5 col-sm-10 product_content">
+                        <div class="product">
+                            <div>
+                                <img class="product_image" src="{{ asset('uploads/pictures/' ~ item.picture) }}" alt="{{ asset(item.alt) }}">
+                            </div>
+                            <div class="">
+                                <div class="">
+                                    <h2 style="margin-top:3%;"><strong class="red">{{item.name}}</strong></h2>
+                                    <p class="card-text red2"><b style="font-size: 3em;">{{item.price}}</b> {{item.unit}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+{% block stylesheet %}
+{{ parent() }}
+
+{% endblock %}
