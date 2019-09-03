@@ -440,4 +440,12 @@ class DefaultController extends Controller
             'form' => $form->createView()
         ]);
     }
+
+
+    /**
+     * @Route("/promotions", name="promotion")
+     */
+    public function promotionsActions(Request $request){
+
+    }
 }
