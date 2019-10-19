@@ -1,114 +1,183 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-    <div class="background">
-        <br>
-        <h1 style="margin-left:4%; font-size:4vw; margin-top: 6%" class="titleImage">La qualité
-            <br> <strong style='font-size:5vw;'>au meilleur prix</strong></h1><br>
+{#    <div class="background">#}
+{#        <br>#}
+{#        <h1 style="margin-left:4%; font-size:4vw; margin-top: 6%" class="titleImage">La qualité#}
+{#            <br> <strong style='font-size:5vw;'>au meilleur prix</strong></h1><br>#}
 {#        <a href="#who" class="buttonLien" id="decouvrirButton">#}
 {#            <button type="button" name="button" class="btn btn-danger" style="margin-left: 7%; font-size: 1.5vw;">Découvrir</button>#}
 {#        </a>#}
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    </div>
-    {# Témoignage clients #}
-    <br>
-    <h2 class="center sizeTitle"><strong class="red">Que disent nos clients de nous ?</strong></h2><br><br>
+{#        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>#}
+{#    </div>#}
 
-    <div id="carouselExampleIndicators" class="carousel slide center" data-ride="carousel" data-interval="2000">
-        <ol class="carousel-indicators">
-{#            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>#}
-{#            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>#}
-{#            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>#}
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div style="color:orange; font-size:30px;">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
+
+    {# Promotions qui défilent #}
+    <div class="container-fluid row" style="margin-top: 4%; margin-bottom: 10%;">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8 center">
+            <h1 class="sizeTitle red"><b>En ce moment</b></h1><br><br>
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="{{ (asset('images/promotion/1.png')) }}" alt="Première promotion - Boucherie SAM Levallois Perret">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="{{ (asset('images/promotion/2.png')) }}" alt="Deuxième promotion - Boucherie SAM Levallois Perret">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="{{ (asset('images/promotion/3.png')) }}" alt="Troisième promotion - Boucherie SAM Levallois Perret">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="{{ (asset('images/promotion/4.png')) }}" alt="Quatrième promotion - Boucherie SAM Levallois Perret">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="{{ (asset('images/promotion/5.png')) }}" alt="Cinquième promotion - Boucherie SAM Levallois Perret">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="{{ (asset('images/promotion/6.png')) }}" alt="Sixième promotion - Boucherie SAM Levallois Perret">
+                    </div>
                 </div>
-                <div style="font-size: 40px;">Tara Z.</div>
-                <div style="font-style: italic">Top!</div>
-            </div>
-            <div class="carousel-item">
-                <div style="color:orange; font-size:30px;">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <div style="font-size: 40px;">Younes A.</div>
-                <div style="font-style: italic">Propre, viande de qualité, service de proximité.</div>
-            </div>
-            <div class="carousel-item">
-                <div style="color:orange; font-size:30px;">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <div style="font-size: 40px;">Khalil B.</div>
-                <div style="font-style: italic"></div>
-            </div>
-            <div class="carousel-item">
-                <div style="color:orange; font-size:30px;">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                </div>
-                <div style="font-size: 40px;">Samuel C.</div>
-                <div style="font-style: italic"></div>
-            </div>
-            <div class="carousel-item">
-                <div style="color:orange; font-size:30px;">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <div style="font-size: 40px;">Faris A.</div>
-                <div style="font-style: italic"></div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
-    <br><br><br><br>
-    <div class="container-fluid row">
-        <div class="col-sm-2 col-md-4"></div>
-        <div class="col-sm-8 col-md-4"><a
-                    href="https://www.google.com/search?q=Boucherie+SAM+Levallois&oq=Boucherie+sam+levallois&aqs=chrome.0.69i59j69i60l3.3303j0j1&sourceid=chrome&ie=UTF-8#lrd=0x47e66f88aac3ff9d:0x981552742db49432,1,,," style="text-decoration: none;"><h3 class="center btn btn-outline-danger btn-block" style="font-size: 25px; border-radius: 12px; padding: 5% 2% 5% 2%; margin: 0% 2% 0% 2%;">Vous aussi, donnez votre avis !</h3></a></div>
-        <div class="col-sm-2 col-md-4"></div>
     </div>
 
 
+    {# Témoignage clients #}
+    <span style="background-color:rgba(128,128,128,0.11) !important; padding-top: 4%; padding-bottom: 4%" class="container-fluid row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6 col-xs-12">
+            <h2 class="center sizeTitle"><strong class="red">Que disent nos clients de nous ?</strong></h2><br><br>
 
-    <div class="container-fluid" id="who">
+        <div id="carouselExampleIndicators" class="carousel slide center" data-ride="carousel" data-interval="2000">
+            <ol class="carousel-indicators">
+    {#            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>#}
+                {#            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>#}
+                {#            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>#}
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div style="color:orange; font-size:30px;">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div style="font-size: 40px;">Tara Z.</div>
+                    <div style="font-style: italic">Top!</div>
+                </div>
+                <div class="carousel-item">
+                    <div style="color:orange; font-size:30px;">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div style="font-size: 40px;">Younes A.</div>
+                    <div style="font-style: italic">Propre, viande de qualité, service de proximité.</div>
+                </div>
+                <div class="carousel-item">
+                    <div style="color:orange; font-size:30px;">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div style="font-size: 40px;">Khalil B.</div>
+                    <div style="font-style: italic"></div>
+                </div>
+                <div class="carousel-item">
+                    <div style="color:orange; font-size:30px;">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div style="font-size: 40px;">Samuel C.</div>
+                    <div style="font-style: italic"></div>
+                </div>
+                <div class="carousel-item">
+                    <div style="color:orange; font-size:30px;">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div style="font-size: 40px;">Faris A.</div>
+                    <div style="font-style: italic"></div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <br><br><br><br>
+        <div class="container-fluid row">
+            <div class="col-xs-2 col-lg-3"></div>
+            <div class="col-xs-8 col-lg-6">
+                <a
+                        href="https://www.google.com/search?q=Boucherie+SAM+Levallois&oq=Boucherie+sam+levallois&aqs=chrome.0.69i59j69i60l3.3303j0j1&sourceid=chrome&ie=UTF-8#lrd=0x47e66f88aac3ff9d:0x981552742db49432,1,,," style="text-decoration: none;">
+                    <h3 class="center btn btn-outline-danger btn-block" style="font-size: 25px; border-radius: 12px; padding: 5% 2% 5% 2%; margin: 0% 2% 0% 2%;">Vous aussi, donnez votre avis !</h3>
+                </a></div>
+        </div>
+        </div>
+        <div class="col-lg-3"></div>
+
+    </span>
+
+
+    <div class="container-fluid" id="who" style="margin-top: 5%;">
         <div class="row" style="background-color: #FFF">
             <div class="col-md-12"><br><br>
                 <h2 class="center sizeTitle"><strong class="red">Où nous retrouver ?</strong></h2><br><br>
             </div>
-            <div class="col-md-6 col-xs-12">
+        </div>
+        <div class="row ">
+            <div class="col-xs-12 col-lg-6">
                 <h3 class="sizeTitle2" style="margin-left: 6%;"><strong class="red">La boucherie</strong></h3><br>
                 <div class="sizeText2" style="margin-left:8%; padding-right: 5%;">
-                    La boucherie à Levallois-Perret :<br>
+                    <b>La boucherie :</b>
                     3, Place du Maréchal de Lattre de Tassigny, Levallois-Perret 92300
-                </div><br><br><br><br><br>
+                </div><br><br>
+
+                <h3 class="" style="margin-left: 6%;"><strong class="red">Horaires</strong></h3><br>
+                <div class="sizeText2" style="margin-left:8%; padding-right: 5%;">
+                    <b>Lundi au samedi</b> : 9h00 - 13h00 puis 15h00 - 19h30 <br>
+                    <b>Dimanche</b> : 9h00 - 14h00 <br><br>
+
+                    La boucherie est <b>halal</b> et non cacher.
+                </div>
+
+
+                <br><br><br>
             </div>
 
-            <div class="col-md-6 col-xs-12">
+            <div class="col-xs-12 col-lg-6 center">
                 <div style="overflow:hidden;width: 100%;height: 100%;">
                     <iframe width="800" height="100%" src="https://maps.google.com/maps?width=500&amp;height=300&amp;hl=fr&amp;q=3%2C%20Place%20du%20Mar%C3%A9chal%20de%20Lattre%20de%20Tassigny%2C%20Levallois-Perret+(Boucherie%20Sam%20Viandes)&amp;ie=UTF8&amp;t=&amp;z=17&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                 </div>
